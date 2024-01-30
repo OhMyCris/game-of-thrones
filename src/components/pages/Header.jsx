@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
+import "./Header.css"
 
 
 const Header = () => {
 
   const {i18n} = useTranslation();
-  const {t} = useTranslation();
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang)
@@ -14,17 +14,10 @@ const Header = () => {
   return (
     <header>
       <Link to='/'>
-          <button>{t('home')}
-          <img src="./public/images/home.png" style={{ width: '50%', height: '50%', objectFit: 'cover' }}/></button>
+          <img src="./public/images/home.png"/>
         </Link>
-
-        <button>
-          <img src="./public/images/spain.png" onClick={() => handleLanguageChange('es')}/>
-        </button>
-        <button>
-          <img src="./public/images/united-kingdom.png" onClick={() => handleLanguageChange('en')}/>
-        </button>
-        
+        <img className="espacio" src="./public/images/spain.png" onClick={() => handleLanguageChange('es')}/>
+        <img className="espacio" src="./public/images/united-kingdom.png" onClick={() => handleLanguageChange('en')}/>
     </header>
   )
 }
