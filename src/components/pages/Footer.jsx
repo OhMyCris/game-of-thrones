@@ -3,9 +3,6 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <footer>
-      <Link to='/'>
-          <button>Home</button>
-        </Link>
         <Link to='/characters'>
           <button>Characters</button>
         </Link>
