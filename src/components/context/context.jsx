@@ -14,7 +14,8 @@ export const GameOfContextProvider = ({children}) => {
     useEffect(() => {
         const getCharacters = async () => {
             const characterApi = await axios.get(`${baseUrl}/characters`)
-            setCharacters(characterApi);
+            setCharacters(characterApi.data);
+            console.log(characterApi.data);
         }
 
         getCharacters()
