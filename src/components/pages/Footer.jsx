@@ -1,16 +1,20 @@
+import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
+
+  const {t} = useTranslation();
+
   return (
     <footer>
         <Link to='/characters'>
-          <button>Characters</button>
+          <button>{t('characters')}</button>
         </Link>
         <Link to='/casas'>
-          <button>Casas</button>
+          <button>{t('houses')}</button>
         </Link>
         <Link to='/cronologia'>
-          <button>Cronologia</button>
+          <button>{t('cronology')}</button>
         </Link>
     </footer>
   )

@@ -4,10 +4,13 @@ import './index.css'
 import { GameOfContextProvider } from './components/context/context.jsx'
 
 import './i18n';
+import { Suspense } from 'react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <GameOfContextProvider>
-    <App />
+    <Suspense fallback="loading">
+      <App />
+    </Suspense>
   </GameOfContextProvider>
     
   
