@@ -8,11 +8,11 @@
 }
 
 .fotosperson{
-    .fotosperson {
+   
         width: 200px;
         height: 320px;
         object-fit: cover;
-    }
+   
 }
 
 .interior{

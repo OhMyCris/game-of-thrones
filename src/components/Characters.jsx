@@ -1,28 +1,39 @@
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GameOfContext } from './context/context';
+import "./Characters.css"
 
 function Characters() {
-  const {characters}= useContext(GameOfContext)
-    console.log(characters);
-  return (
-    <div >
-      <h2>Personajes</h2>
-<div className ="characters">
-      {characters.map((character) => (
-        <div className="interior"  key = {character.id}>
-        <h4> {character.name}</h4> 
-        <img className = "fotosperson" src = {character.image} alt={character.name}/>
-       <Link to={`/character/${character.id}`}><button>Saber mas</button></Link>
-          
-</div>
-   
+  const [search, setSearch] = useState("");
+  const { characters } = useContext(GameOfContext);
+  
 
-     )) }
-     </div>
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredCharacters = characters.filter((character) => (
+    character.name.toUpperCase().includes(search.toUpperCase())
+  ));
+
+  return (
+    <div>
+      <input type="text" value={search} placeholder='Buscar...' onChange={handleChange}/>
+      <h2>Personajes</h2>
+      <div className="characters">
+        {filteredCharacters.map((character) => (
+          <div className="interior" key={character.id}>
+            <h4>{character.name}</h4>
+            <img className="fotosperson" src={character.image} alt={character.name}/>
+            <Link to={`/character/${character.id}`}>
+              <button>Saber más</button>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Characters
+export default Characters;
