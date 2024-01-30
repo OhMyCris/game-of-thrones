@@ -1,0 +1,23 @@
+.characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 55px;
+
+}
+
+.fotosperson{
+    .fotosperson {
+        width: 200px;
+        height: 320px;
+        object-fit: cover;
+    }
+}
+
+.interior{
+   
+        display: flex;
+        flex-direction: column;
+    
+}
