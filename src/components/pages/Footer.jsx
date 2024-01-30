@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
+import "./Footer.css"
 
 const Footer = () => {
 
@@ -8,13 +9,13 @@ const Footer = () => {
   return (
     <footer>
         <Link to='/characters'>
-          <button>{t('characters')}</button>
+          <span>{t('characters')}</span>
         </Link>
         <Link to='/casas'>
-          <button>{t('houses')}</button>
+          <span>{t('houses')}</span>
         </Link>
         <Link to='/cronologia'>
-          <button>{t('cronology')}</button>
+          <span>{t('cronology')}</span>
         </Link>
     </footer>
   )

@@ -1,0 +1,10 @@
+span {
+    margin: 10%;
+    font-size: 150%;
+    color:aliceblue;
+    transition: border-bottom 0.3s ease;
+}
+
+span:hover {
+    border-bottom: 4px solid white;;
+  }
