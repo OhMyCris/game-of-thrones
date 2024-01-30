@@ -7,19 +7,20 @@ function Characters() {
   const {characters}= useContext(GameOfContext)
     console.log(characters);
   return (
-    <div>
+    <div >
       <h2>Personajes</h2>
-
+<div className ="characters">
       {characters.map((character) => (
-        <div key = {character.id}>
+        <div className="interior"  key = {character.id}>
         <h4> {character.name}</h4> 
-        <img src = {character.image} alt={character.name}/>
-       <Link to={`/character/${character.id}`}>Saber Más</Link>
+        <img className = "fotosperson" src = {character.image} alt={character.name}/>
+       <Link to={`/character/${character.id}`}><button>Saber mas</button></Link>
           
 </div>
-    
+   
 
      )) }
+     </div>
     </div>
   )
 }
