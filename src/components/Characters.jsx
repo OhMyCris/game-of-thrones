@@ -6,27 +6,27 @@ import { useTranslation } from "react-i18next"
 import "./Characters.css"
 
 function Characters() {
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
   const { characters } = useContext(GameOfContext);
   const {t} = useTranslation();
   
 
-  // const handleChange = (event) => {
-  //   setSearch(event.target.value);
-  // };
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
 
-  // const filteredCharacters = characters.filter((character) => (
-  //   character.name.toUpperCase().includes(search.toUpperCase())
-  // ));
+  const filteredCharacters = characters.filter((character) => (
+    character.name.toUpperCase().includes(search.toUpperCase())
+  ));
 
   return (
     <div>
-    {/* <div className= "buscador">
+    <div className= "buscador">
       <input className="search" type="text" value={search} placeholder=' &#x1F50D; Buscar...' onChange={handleChange}/>
-      </div> */}
+      </div>
       <h2>{t('characters')}</h2>
       <div className="characters">
-        {characters.map((character) => (
+        {filteredCharacters.map((character) => (
           <div className="interior" key={character.id}>
             <h4>{character.name}</h4>
 
