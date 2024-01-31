@@ -5,7 +5,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 55px;
-
+margin-bottom: 50px;
+overflow-y: auto;
+height: 750px;
 }
 
 .fotosperson{
