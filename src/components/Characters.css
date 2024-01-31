@@ -1,0 +1,40 @@
+
+.characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 55px;
+margin-bottom: 50px;
+overflow-y: auto;
+height: 750px;
+}
+
+.fotosperson{
+   
+        width: 200px;
+        height: 320px;
+        object-fit: cover;
+   
+}
+
+.interior{
+   
+        display: flex;
+        flex-direction: column;
+  
+}
+
+.buscador{
+  
+        display: flex;
+   
+}
+
+.search{
+   
+        background: black;
+        border: none;
+        border-bottom: 2px solid white;
+        font: white
+    }

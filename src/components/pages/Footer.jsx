@@ -1,19 +1,21 @@
+import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
+import "./Footer.css"
 
 const Footer = () => {
+
+  const {t} = useTranslation();
+
   return (
     <footer>
-      <Link to='/'>
-          <button>Home</button>
-        </Link>
         <Link to='/characters'>
-          <button>Characters</button>
+          <span>{t('characters')}</span>
         </Link>
         <Link to='/casas'>
-          <button>Casas</button>
+          <span>{t('houses')}</span>
         </Link>
         <Link to='/cronologia'>
-          <button>Cronologia</button>
+          <span>{t('cronology')}</span>
         </Link>
     </footer>
   )

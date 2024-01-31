@@ -9,6 +9,7 @@ import DetailCharacters from './components/DetailCharacters'
 import Casas from './components/Casas'
 import DetailCasas from './components/DetailCasas'
 import Cronologia from './components/Cronologia'
+import Search from './components/Search'
 
 function App() {
   
@@ -21,10 +22,13 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>} />
               <Route path='/characters' element={<Characters/>} />
+              <Route path='/characters?name=' element={<Search/>} />
               <Route path='/characters/:id' element={<DetailCharacters/>} />
               <Route path='/casas' element={<Casas/>} />
               <Route path='/casas/:id' element={<DetailCasas/>} />
               <Route path='/cronologia' element={<Cronologia/>} />
+              <Route path="/casas/:id/:settlement" component={<DetailCasas/>} />
+
               
             </Routes>
           </main>
