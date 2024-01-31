@@ -11,6 +11,7 @@ export const GameOfContextProvider = ({children}) => {
 
     const [characters, setCharacters] = useState([])
     const [houses, setHouses] = useState([])
+    const [search, setSearch] = useState([])
 
     useEffect(() => {
         const getCharacters = async () => {
@@ -32,8 +33,18 @@ export const GameOfContextProvider = ({children}) => {
         getHouses()
     }, [])
 
+    useEffect(() => {
+        const getSearch = async () => {
+            const searchApi = await axios.get(`${baseUrl}/characters?name=`)
+            setSearch(searchApi.data);
+            console.log(searchApi.data);
+        }
+
+        getSearch()
+    }, [])
+
     return (
-        <GameOfContext.Provider value={{characters, houses}}>
+        <GameOfContext.Provider value={{characters, houses, search}}>
             {children}
         </GameOfContext.Provider>
     )
