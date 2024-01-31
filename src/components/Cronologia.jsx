@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './Cronologia.css'
 import 'simplebar/dist/simplebar.min.css';
-import SimpleBar from 'simplebar-react'
+// import SimpleBar from 'simplebar-react'
 import { GameOfContext } from './context/context';
 
 const Cronologia = () => {
