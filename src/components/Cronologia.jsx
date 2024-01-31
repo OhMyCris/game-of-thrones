@@ -37,7 +37,7 @@ const Cronologia = () => {
       <div onClick={cambio} className='cursor'>
         {ascendingOrder ? '\u2191' : '\u2193'}
       </div>
-      <SimpleBar style={{ maxHeight: '720px', maxWidth:'width: 800px'}} ref={simpleBarRef}>
+      {/* <SimpleBar style={{ maxHeight: '720px', maxWidth:'width: 800px'}} ref={simpleBarRef}> */}
         <div className='orden'>
           {character.map((chara) =>(
             <div key={chara.id} className={chara.id % 2 === 0 ? 'clear' : 'caja'}>
@@ -47,7 +47,7 @@ const Cronologia = () => {
             </div>
           ))}
         </div>
-      </SimpleBar>
+      {/* </SimpleBar> */}
     </div>
   )
 }
