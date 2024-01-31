@@ -25,6 +25,8 @@ function App() {
               <Route path='/casas' element={<Casas/>} />
               <Route path='/casas/:id' element={<DetailCasas/>} />
               <Route path='/cronologia' element={<Cronologia/>} />
+              <Route path="/casas/:id/:settlement" component={<DetailCasas/>} />
+
               
             </Routes>
           </main>
