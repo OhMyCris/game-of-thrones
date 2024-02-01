@@ -12,21 +12,25 @@ useEffect(()=>{
 }, [])
 
   return (
-    <div>
-      <button><a href="/casas">salir</a></button>
+    <section>
+      
+
+        <div className="container-imagen">
       <img src={house.image} alt="imagen" />
       <p>{house.name}</p>
-
+      </div>
       <div className="contenedor-detalles">
-       <p className="parrafo1">Region <br />{house.region}</p>
-       <p>Settlement <br />{house.settlement}</p>
-       <p>Alliances <br />{house.alliances}</p>
-       <p>Religions <br />{house.religions}</p>
-       <p>Foundation <br />{house.foundation}</p>
+       <p className="parrafo1">Region <br /> <br />{house.region}</p>
+       <p>SEDE <br /> <br />{house.settlement}</p>
+       <p>ALLIANCES <br /> <br />{house.alliances}</p>
+       <p>RELIGIONS <br /> <br />{house.religions}</p>
+       <p>FOUNDATION <br /> <br />{house.foundation}</p>
        
       </div>
+    </section>
+    
        
-    </div>
+    
   )
 }
 
