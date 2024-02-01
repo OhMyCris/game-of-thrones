@@ -54,7 +54,9 @@ const [detailsHouses, setDetailsHouses] = useState([]);
   });
 
   return (
+    
     <div>
+   
       <Link to={`/characters`}>
         <img
           className="fotosperson"

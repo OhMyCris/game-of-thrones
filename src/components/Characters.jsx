@@ -44,8 +44,11 @@ function Characters() {
     }
   })
 
+
+  
+
   return (
-    <div>
+    <div className="general" >
       <div className="buscador">
         <input
           className="search"
@@ -55,12 +58,12 @@ function Characters() {
           onChange={handleChange}
         />
       </div>
-      <h2>{t("characters")}</h2>
+     
       <SimpleBar className="simpleBarCharacters" ref={simpleBarRef}>
       <div className="characters">
         {characters.map((character) => (
           <div className="interior" key={character.id}>
-            <h4>{character.name}</h4>
+           
 
             <Link to={`/characters/${character.id}`}>
               <img
