@@ -1,13 +1,15 @@
 
 .characters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 55px;
-/* margin-bottom: 50px; */
-
-}
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 18px;
+        height: 650px;
+       
+        margin-top: 16px;
+        margin-right: 10px;
+    }
 
 .simpleBarCharacters{
         margin-bottom: 50px;
@@ -67,3 +69,5 @@
         border-bottom: 2px solid white;
         font: white
     }
+
+   
