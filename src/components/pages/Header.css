@@ -5,3 +5,8 @@ header {
 .espacio {
     margin-left: 1.5%;
 }
+
+.volver {
+    font-size: smaller;
+    display: flex;
+}
