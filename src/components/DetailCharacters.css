@@ -1,0 +1,5 @@
+.contenedor-detalles{
+    display: flex;
+    column-gap: 200px;
+}
+

@@ -5,6 +5,7 @@ section{
     justify-content: space-evenly;
     text-align: center;
     gap: 20px;
+    row-gap: 50px;
     /* overflow-y: auto; */
     /* height: 750px; */
 }
