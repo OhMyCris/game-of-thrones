@@ -1,0 +1,50 @@
+.simpleBarDetails {
+    /* margin-bottom: 5px; */
+    overflow-y: auto;
+    height: 150px;
+    width: 12vw;
+}
+
+.simplebar-track {
+    background-color: #2b2b2b;
+    width: 4px !important;
+  }
+
+.simplebar-scrollbar {
+    opacity: 1 !important; 
+    transition: none !important; 
+    scrollbar-shadow-color: aliceblue;
+    width: 5px ;
+
+  }
+
+.simplebar-scrollbar::before,
+.simplebar-scrollbar::after {
+    opacity: 1 !important; 
+    background-color: rgb(255, 255, 255) !important;
+    width: 5px ;
+
+}
+
+.detalles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+}
+
+.datos {
+    font-size: 9px;
+    color: white;
+    width: 185px;
+}
+
+
+.nombre {
+    color: white;
+    font-size: 20px;
+}
+
+.titulos {
+    font-size: 15px;
+}

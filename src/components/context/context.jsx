@@ -10,6 +10,7 @@ const baseUrl = "https://game-of-thrones-json-server.vercel.app"
 export const GameOfContextProvider = ({children}) => {
 
     const [characters, setCharacters] = useState([])
+    // const [detalleCharacters, setDetalleCharacters] = useState([])
     const [houses, setHouses] = useState([])
     // const [search, setSearch] = useState([])
 
@@ -22,6 +23,16 @@ export const GameOfContextProvider = ({children}) => {
 
         getCharacters()
     }, [])
+
+    // useEffect(() => {
+    //     const getDetalleCharacters = async () => {
+    //         const detalleCharacterApi = await axios.get(`${baseUrl}/characters/${id}`)
+    //         setDetalleCharacters(detalleCharacterApi.data);
+    //         console.log(detalleCharacterApi.data);
+    //     }
+
+    //     getDetalleCharacters()
+    // },[])
 
     useEffect(() => {
         const getHouses = async () => {
@@ -44,7 +55,7 @@ export const GameOfContextProvider = ({children}) => {
     // }, [])
 
     return (
-        <GameOfContext.Provider value={{characters, houses, }}>
+        <GameOfContext.Provider value={{characters, houses}}>
             {children}
         </GameOfContext.Provider>
     )
