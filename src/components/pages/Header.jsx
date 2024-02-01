@@ -11,36 +11,45 @@ const Header = () => {
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang)
   }
-
+  const { pathname } = useLocation()
+  // const rutaDinamica = useRouteMatch("/characters/:id");
   const [mostrarHome, setMostrarHome] = useState(false)
   const [mostrarVolver, setMostrarVolver] = useState(false)
-  const location = useLocation()
+  const [mostrarVolverDos, setMostrarVolverDos] = useState(false)
+  
 
   const rutasFijas = ['/characters', '/casas', '/cronologia']
-  const rutasDinamicas = ['/characters/:id', '/casas/:id']
+  // const rutasDinamicas = ['/characters/:id', '/casas/:id']
 
   useEffect(() => {
     const rutaFija = rutasFijas.includes(location.pathname);
-    const rutaDinamica = rutasDinamicas.includes(location.pathname);
-
-    setMostrarHome(rutaFija || rutaDinamica)
-  }, [location.pathname])
+    // const rutaDinamica = rutasDinamicas.includes(location.pathname);
+    setMostrarHome(rutaFija || pathname.startsWith("/characters/") || pathname.startsWith("/casas/"))
+  }, [pathname])
 
   useEffect(() => {
-    const rutaDinamica = rutasDinamicas.includes(location.pathname);
+    setMostrarVolver(pathname.startsWith("/characters/"))
+  }, [pathname])
 
-    setMostrarVolver(rutaDinamica)
-  }, [location.pathname])
+  useEffect(() => {
+    setMostrarVolverDos(pathname.startsWith("/casas/"))
+  }, [pathname])
 
   return (
     <header>
-      {/* {mostrarVolver && ( */}
+      {mostrarVolver ? (
         <Link to='/characters'>
           <div className="volver">
             <p>←  Volver</p>
           </div>
         </Link>
-      {/* )} */}
+      ) : mostrarVolverDos ? (
+        <Link to='/casas'>
+          <div className="volver">
+            <p>←  Volver</p>
+          </div>
+        </Link>
+      ) : ''}
       {mostrarHome && (
         <Link to='/'>
           <img src="./public/images/home.png"/>
