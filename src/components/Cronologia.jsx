@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './Cronologia.css'
 import 'simplebar/dist/simplebar.min.css';
-// import SimpleBar from 'simplebar-react'
+import SimpleBar from 'simplebar-react'
 import { GameOfContext } from './context/context';
 
 const Cronologia = () => {
@@ -37,8 +37,9 @@ const Cronologia = () => {
       <div onClick={cambio} className='cursor'>
         {ascendingOrder ? '\u2191' : '\u2193'}
       </div>
-      {/* <SimpleBar style={{ maxHeight: '720px', maxWidth:'width: 800px'}} ref={simpleBarRef}> */}
+      <SimpleBar className='simplebar-container' ref={simpleBarRef}> 
         <div className='orden'>
+        
           {character.map((chara) =>(
             <div key={chara.id} className={chara.id % 2 === 0 ? 'clear' : 'caja'}>
               <p>{chara.age ? chara.age : '??'}</p>
@@ -46,8 +47,9 @@ const Cronologia = () => {
               <img src={chara.image} alt={chara.name} className='circulos'/>
             </div>
           ))}
+          
         </div>
-      {/* </SimpleBar> */}
+        </SimpleBar>
     </div>
   )
 }
