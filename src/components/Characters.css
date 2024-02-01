@@ -5,10 +5,39 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 55px;
-margin-bottom: 50px;
-overflow-y: auto;
-height: 750px;
+/* margin-bottom: 50px; */
+
 }
+
+.simpleBarCharacters{
+        margin-bottom: 50px;
+        overflow-y: auto;
+        height: 700px; 
+        width: 80vw;
+        /* margin:0 10%; */
+}
+
+.simplebar-track {
+        background-color: #2b2b2b;
+        width: 4px !important;
+      }
+    
+    .simplebar-scrollbar {
+        opacity: 1 !important; 
+        transition: none !important; 
+        scrollbar-shadow-color: aliceblue;
+        width: 5px ;
+    
+      }
+    
+    .simplebar-scrollbar::before,
+    .simplebar-scrollbar::after {
+        opacity: 1 !important; 
+        background-color: rgb(255, 255, 255) !important;
+        width: 5px ;
+      
+    }
+    
 
 .fotosperson{
    
