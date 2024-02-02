@@ -73,7 +73,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <div className="datosvarios">
           {detailsHouses.map((house, index) => (
             <div className="interior" key={index}>
-            {house.name === detalleCharacters.house &&  <img src ={house.image}  alt={detalleCharacters.house}  /> }
+            {house.name === detalleCharacters.house && <img src ={house.image}  alt={detalleCharacters.house}  /> }
              
             </div>
           ))}

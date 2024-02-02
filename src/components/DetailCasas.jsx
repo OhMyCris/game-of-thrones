@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react"
+
 import { useParams } from "react-router-dom"
 import { unicaCasa } from "../funciones/funcion"
 import "./DetailsCasas.css"
+import { useEffect, useState } from "react"
 const DetailCasas = () => {
   const [house, setHouse] = useState([])
 
