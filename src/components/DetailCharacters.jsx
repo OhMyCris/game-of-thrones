@@ -72,9 +72,12 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <h4 className="titulos">{t('house')}</h4>
         <div className="datosvarios">
           {detailsHouses.map((house, index) => (
+
            
             house.name === detalleCharacters.house && ( <div key={index}>  <img className ="escudosI" src ={house.image}  alt={detalleCharacters.house}  /></div>)
               
+            
+
              
            
           ))}

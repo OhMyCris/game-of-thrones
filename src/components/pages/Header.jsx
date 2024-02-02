@@ -57,7 +57,6 @@ const Header = () => {
       )}
         <img className="espacio" src="./public/images/spain.png" onClick={() => handleLanguageChange('es')}/>
         <img className="espacio" src="./public/images/united-kingdom.png" onClick={() => handleLanguageChange('en')}/>
-        <p>hola</p>
     </header>
   )
 }

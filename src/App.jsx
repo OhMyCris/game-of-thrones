@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import './App.css'
 import Header from './components/pages/Header'
 import Footer from './components/pages/Footer'
@@ -12,6 +12,7 @@ import Cronologia from './components/Cronologia'
 // import Search from './components/Search'
 
 function App() {
+
   
 
   return (
@@ -20,18 +21,18 @@ function App() {
         <Header/>
           <main>
             <Routes>
-              <Route path='/' element={<Home/>} />
-              <Route path='/characters' element={<Characters/>} />
-              {/* <Route path=`/characters?name${characters.name}` element={<Search/>} /> */}
-              <Route path='/characters/:id' element={<DetailCharacters/>} />
-              <Route path='/casas' element={<Casas/>} />
-              <Route path='/casas/:id' element={<DetailCasas/>} />
-              <Route path='/cronologia' element={<Cronologia/>} />
-              <Route path="/casas/:id/:settlement" component={<DetailCasas/>} />
-
+              
+                  <Route path='/' element={<Home/>} />
+                  <Route path='/characters' element={<Characters/>} />
+                  {/* <Route path=`/characters?name${characters.name}` element={<Search/>} /> */}
+                  <Route path='/characters/:id' element={<DetailCharacters/>} />
+                  <Route path='/casas' element={<Casas/>} />
+                  <Route path='/casas/:id' element={<DetailCasas/>} />
+                  <Route path='/cronologia' element={<Cronologia/>} />
+                
               
             </Routes>
-          </main>
+            </main>
         <Footer/>
       </BrowserRouter>
     </>

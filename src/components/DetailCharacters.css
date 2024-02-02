@@ -1,9 +1,0 @@
-.contenedor-detalles{
-    display: flex;
-    column-gap: 200px;
-}
-
-.container-imagen{
-    display: flex;
-    flex-direction: column;
-}
