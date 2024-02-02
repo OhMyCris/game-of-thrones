@@ -1,0 +1,23 @@
+.contenedor-detalles{
+    display: flex;
+    column-gap: 200px;
+}
+
+.container-imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.buscador-casas{
+    width: 200px;
+}
+
+.buscador-casas:hover{
+    box-shadow: 2px 2px 2px 5px #4C51A8;
+}
+
+.imagenDetalle{
+    width: 300px;
+}

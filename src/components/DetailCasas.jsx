@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { unicaCasa } from "../funciones/funcion"
-import "./DetailCharacters.css"
+import "./DetailsCasas.css"
 const DetailCasas = () => {
   const [house, setHouse] = useState([])
 
@@ -16,7 +16,7 @@ useEffect(()=>{
       
 
         <div className="container-imagen">
-      <img src={house.image} alt="imagen" />
+      <img src={house.image} alt="imagen" className="imagenDetalle"/>
       <p>{house.name}</p>
       </div>
       <div className="contenedor-detalles">
