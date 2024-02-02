@@ -55,7 +55,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
 
   return (
     
-    <div>
+    <div className="todoDatalles" >
    
       <Link to={`/characters`}>
         <img
@@ -72,10 +72,14 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <h4 className="titulos">{t('house')}</h4>
         <div className="datosvarios">
           {detailsHouses.map((house, index) => (
-            <div className="interior" key={index}>
-            {house.name === detalleCharacters.house && <img src ={house.image}  alt={detalleCharacters.house}  /> }
+
+           
+            house.name === detalleCharacters.house && ( <div key={index}>  <img className ="escudosI" src ={house.image}  alt={detalleCharacters.house}  /></div>)
+              
+            
+
              
-            </div>
+           
           ))}
           
         </div>
@@ -85,7 +89,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <h4 className="titulos">{t('alliances')}</h4>
         <div className="datosvarios">
           {detalleCharacters.alliances.map((alliance, index) => (
-            <div className="interior" key={index}>
+            <div className="interior2" key={index}>
               <h4>{alliance}</h4>
             </div>
           ))}
@@ -98,7 +102,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
           <SimpleBar className="simpleBarDetails" ref={simpleBarRef}>
           <div className="datosvarios">
             {detalleCharacters.episodes.map((episode, index) => (
-              <div className="interior" key={index}>
+              <div className="interior2" key={index}>
                 <h4>{episode}</h4>
               </div>
             ))}
@@ -110,7 +114,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <h4 className="titulos">{t('parents')}</h4>
         <div className="datosvarios">
           {detalleCharacters.parents.map((parents, index) => (
-            <div className="interior" key={index}>
+            <div className="interior2" key={index}>
               <h4>{parents}</h4>
             </div>
           ))}
@@ -121,7 +125,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
         <h4 className="titulos">{t('family')}</h4>
         <div className="datosvarios">
           {detalleCharacters.siblings.map((siblings, index) => (
-            <div className="interior" key={index}>
+            <div className="interior2" key={index}>
               <h4>{siblings}</h4>
             </div>
           ))}
@@ -135,7 +139,7 @@ const [detailsHouses, setDetailsHouses] = useState([]);
           <SimpleBar className="simpleBarDetails" ref={simpleBarRef}>
           <div className="datosvarios">
             {detalleCharacters.titles.map((titles, index) => (
-              <div className="interior" key={index}>
+              <div className="interior2" key={index}>
                 <h4>{titles}</h4>
               </div>
             ))}
