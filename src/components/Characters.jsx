@@ -23,15 +23,6 @@ function Characters({characters}) {
   return (
 
     <div className="general" >
-      
-     
-      <SimpleBar className="simpleBarCharacters" ref={simpleBarRef}>
-      <div className="characters">
-        {characters.map((character) => (
-          <div className="interior" key={character.id}>
-           
-
-
       <SimpleBar className="simpleBarCharacters" ref={simpleBarRef}>
         <div className="characters">
           {characters.map((character) => (
