@@ -58,7 +58,7 @@ function Characters() {
         <div className="characters">
           {characters.map((character) => (
             <div  key={character.id}>
-              <figure className="interior">
+              <figure className="namehover">
               <Link to={`/characters/${character.id}`}>
                 <img
                   className="fotosperson"

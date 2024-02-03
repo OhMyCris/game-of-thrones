@@ -10,7 +10,7 @@
   margin-right: 8px;
 }
 
-.interior {
+.namehover {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -42,10 +42,13 @@
   padding-top: 14px;
 }
 
-.characters .interior:hover > .name {
-  opacity: 1;
-  visibility: visible;
-}
+
+  .characters .namehover:hover  .name{
+    opacity: 1;
+    visibility: visible;
+  }
+ 
+
 
 .simpleBarCharacters {
   margin-bottom: 50px;
