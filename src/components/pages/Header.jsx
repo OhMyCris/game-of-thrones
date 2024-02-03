@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import "./Header.css"
 import { useEffect, useState } from "react";
+// import axios from "axios";
 
 
-const Header = () => {
-
+const Header = ({getCharacters}) => {
+ 
   const {i18n} = useTranslation();
 
   const handleLanguageChange = (lang) => {
@@ -16,6 +17,7 @@ const Header = () => {
   const [mostrarHome, setMostrarHome] = useState(false)
   const [mostrarVolver, setMostrarVolver] = useState(false)
   const [mostrarVolverDos, setMostrarVolverDos] = useState(false)
+  const [mostrarSearch, setMostrarSearch] = useState(false)
   
 
   const rutasFijas = ['/characters', '/casas', '/cronologia']
@@ -29,14 +31,71 @@ const Header = () => {
 
   useEffect(() => {
     setMostrarVolver(pathname.startsWith("/characters/"))
+    setMostrarVolverDos(pathname.startsWith("/casas/"))
+    setMostrarSearch(pathname === "/characters")
   }, [pathname])
 
-  useEffect(() => {
-    setMostrarVolverDos(pathname.startsWith("/casas/"))
-  }, [pathname])
+  ///buscador///
+
+  // const baseUrl = "https://game-of-thrones-json-server.vercel.app";
+
+  // const handleChange = (event) => {
+  //   console.log("event.target.value");
+   
+  //   getCharacters(event.target.value)
+  // };
+
+  // const [characters, setCharacters] = useState([]);
+ 
+
+  // const getCharacters = async (name) => {
+  //   if (name) {
+  //     const characterApi = await axios.get(`${baseUrl}/characters?name=${name}`);
+  //     setCharacters(characterApi.data);
+  //   }
+  //   else{
+  //   const characterApi = await axios.get(`${baseUrl}/characters`);
+  //   setCharacters(characterApi.data);
+  //   console.log(characterApi.data);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getCharacters();
+  // }, []);
+
+  ///endbuscador///
+
+  const [buscar, setBuscar] = useState('')
+  const navigate = useNavigate()
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleChange();
+      getCharacters(e.target.value)
+    }
+  }
+
+  const handleChange = () => {
+    navigate(`/characters?name=${buscar}`)
+    console.log(buscar);
+  }
+  
 
   return (
     <header>
+    {mostrarSearch && (
+      <div className="buscador">
+          <input
+            className="search"
+            type="text"
+            placeholder=" &#x1F50D; Buscar..."
+            onChange={(e) => setBuscar(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+      </div>
+    )}
+      
       {mostrarVolver ? (
         <Link to='/characters'>
           <div className="volver">
