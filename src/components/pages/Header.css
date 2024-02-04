@@ -22,3 +22,9 @@ header {
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
+.reprocador {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
