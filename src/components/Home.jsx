@@ -5,7 +5,8 @@ const Home = () => {
     const {t} = useTranslation();
 
   return (
-    <div style={{ position: 'relative', width: '1200px', height: '750px' }}>
+    
+    <div className="salaTrono" style={{ position: 'relative', width: '1200px', height: '667px' }}>
       <img src="./public/images/portada.jpg"
         style={{ width: '100%', height: '100%'}}
       />

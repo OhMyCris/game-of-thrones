@@ -1,42 +1,46 @@
 
-import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { GameOfContext } from './context/context';
-import { useTranslation } from "react-i18next"
-import "./Characters.css"
+import {  useEffect, useRef} from "react";
+import { Link } from "react-router-dom";
+import 'simplebar/dist/simplebar.min.css';
+import SimpleBar from 'simplebar-react'
 
-function Characters() {
-  // const [search, setSearch] = useState("");
-  const { characters } = useContext(GameOfContext);
-  const {t} = useTranslation();
-  
 
-  // const handleChange = (event) => {
-  //   setSearch(event.target.value);
-  // };
+import "./Characters.css";
 
-  // const filteredCharacters = characters.filter((character) => (
-  //   character.name.toUpperCase().includes(search.toUpperCase())
-  // ));
+
+
+function Characters({characters}) {
+ 
+
+
+  const simpleBarRef = useRef(null);
+  useEffect(() => {
+    if (simpleBarRef.current) {
+      simpleBarRef.current.recalculate();
+    }
+  });
 
   return (
-    <div>
-    {/* <div className= "buscador">
-      <input className="search" type="text" value={search} placeholder=' &#x1F50D; Buscar...' onChange={handleChange}/>
-      </div> */}
-      <h2>{t('characters')}</h2>
-      <div className="characters">
-        {characters.map((character) => (
-          <div className="interior" key={character.id}>
-            <h4>{character.name}</h4>
 
-            <Link to={`/character/${character.id}`}>
-            <img className="fotosperson" src={character.image} alt={character.name}/>           
-            </Link>
-            
-          </div>
-        ))}
-      </div>
+    <div className="general" >
+      <SimpleBar className="simpleBarCharacters" ref={simpleBarRef}>
+        <div className="characters">
+          {characters.map((character) => (
+            <div  key={character.id}>
+              <figure className="namehover">
+              <Link to={`/characters/${character.id}`}>
+                <img
+                  className="fotosperson"
+                  src={character.image}
+                  alt={character.name}
+                />
+                <p className= "name" >{character.name}</p>
+                </Link>
+              </figure>
+            </div>
+          ))}
+        </div>
+      </SimpleBar>
     </div>
   );
 }

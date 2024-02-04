@@ -4,5 +4,17 @@
     "houses":"Casas",
     "cronology":"Cronologia",
     "gameofthrones":"Juego de Tronos",
-    "knowmore":"Saber mas"
+    "knowmore":"Saber mas",
+    "house":"CASA",
+    "alliances":"ALIANZAS",
+    "chapters":"APARICIONES",
+    "parents":"PADRES",
+    "family":"PARIENTES",
+    "titles":"TITULOS",
+    "settlement": "SEDE",
+    "region": "REGION",
+    "religions": "RELIGIONES",
+    "foundations": "FUNDACIÓN",
+    "return": "Volver"
+    
 }

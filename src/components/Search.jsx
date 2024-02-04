@@ -18,7 +18,7 @@ function Search() {
   return (
     <div>
       <div className= "buscador">
-      <input className="search" type="text" value={search} placeholder=' &#x1F50D; Buscar...' onChange={handleChange}/>
+      <input className="search" type="text" value={search} placeholder=' Buscar...' onChange={handleChange}/>
       </div>
       <h2>{('characters')}</h2>
       <div className="characters">

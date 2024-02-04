@@ -1,0 +1,82 @@
+* {
+    color:aliceblue;
+}
+
+.orden {
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.simplebar-container {
+    
+    margin: 5% 0;
+    height: 600px;
+    width: 1400px;
+}
+
+.simplebar-track {
+    background-color: #2b2b2b;
+    width: 4px !important;
+  }
+
+.simplebar-scrollbar {
+    opacity: 1 !important; 
+    transition: none !important; 
+    scrollbar-shadow-color: aliceblue;
+    width: 5px ;
+
+  }
+
+.simplebar-scrollbar::before,
+.simplebar-scrollbar::after {
+    opacity: 1 !important; 
+    background-color: rgb(255, 255, 255) !important;
+    width: 5px ;
+    height:100px;
+}
+ 
+
+.caja {
+    border-top: 3px solid aliceblue;
+    border-right: 2px solid aliceblue;
+    padding: 5%;
+}
+
+.clear {
+    border-top: 3px solid aliceblue;
+    padding: 5%;
+    margin-top: 75%;
+}
+
+.circulos {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cursor {
+    display: inline;
+    font-size: 150%;
+    padding: 1% 2%;
+    cursor: pointer;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+}
+
+
+/* .simplebar-scrollbar:hover {
+    background-color: #ffffff;
+  }
+
+.simplebar-scrollbar::before {
+    background-color: #ffffff; /* Cambia el color de la barra 
+    border-radius: 4px; /* Bordes redondeados 
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);  Sombra 
+  }
+
+  .simplebar-scrollbar {
+    background-color: #ffffff;
+  } */

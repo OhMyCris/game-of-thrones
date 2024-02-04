@@ -4,5 +4,16 @@
     "houses":"Houses",
     "cronology":"Cronology",
     "gameofthrones":"Game of Thrones",
-    "knowmore":"Know more"
+    "knowmore":"Know more",
+    "house":"HOUSE",
+    "alliances":"ALLIANCES",
+    "chapters":"CHAPTERS",
+    "parents":"PARENTS",
+    "family":"OTHER FAMILY",
+    "titles":"TITLES",
+    "settlement":"SETTLEMENT",
+    "region": "REGION",
+    "religions":"RELIGIONS",
+    "foundations": "FOUNDATION",
+    "return": "Return"
 }
