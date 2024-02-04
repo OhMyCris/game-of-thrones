@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import "./Header.css"
 import { useEffect, useState } from "react";
-// import Player1 from "../Player1";
+import Player1 from "../Player1";
 
 // import axios from "axios";
 
@@ -86,12 +86,15 @@ const Header = ({getCharacters}) => {
 
   return (
     <header>
-    {/* <Player1/> */}
+
+   
    
     
     <div className="reproductor">
     <audio loop className="audio" src="videoplayback.m4a" controls> este es un elemento de audio no soportado por tu navegador, prueba con otro </audio>
     </div>
+
+
 
     {mostrarSearch && (
       <div className="buscador">
