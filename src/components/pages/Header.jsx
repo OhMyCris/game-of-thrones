@@ -68,6 +68,7 @@ const Header = ({getCharacters, getCasas}) => {
   // }, []);
 
   ///endbuscador///
+const {t}= useTranslation();
 
   const [buscar, setBuscar] = useState('')
   const [buscarDos, setBuscarDos] = useState('')
@@ -115,7 +116,7 @@ const Header = ({getCharacters, getCasas}) => {
           <input
             className="search"
             type="text"
-            placeholder=" &#x1F50D; Buscar..."
+            placeholder="          Buscar..."
             onChange={(e) => setBuscar(e.target.value)}
             onKeyDown={handleKeyDown}
           />
@@ -127,7 +128,7 @@ const Header = ({getCharacters, getCasas}) => {
           <input
             className="search"
             type="text"
-            placeholder=" &#x1F50D; Buscar..."
+            placeholder="          Buscar..."
             onChange={(e) => setBuscarDos(e.target.value)}
             onKeyDown={handleKeyDownDos}
           />
@@ -138,13 +139,13 @@ const Header = ({getCharacters, getCasas}) => {
       {mostrarVolver ? (
         <Link to='/characters'>
           <div className="volver">
-            <p>←  Volver</p>
+            <p>←   {t('return')}</p>
           </div>
         </Link>
       ) : mostrarVolverDos ? (
         <Link to='/casas'>
           <div className="volver">
-            <p>←  Volver</p>
+            <p>←  {t('return')}</p>
           </div>
         </Link>
       ) : ''}

@@ -24,15 +24,7 @@ export const GameOfContextProvider = ({children}) => {
         getCharacters()
     }, [])
 
-    // useEffect(() => {
-    //     const getDetalleCharacters = async () => {
-    //         const detalleCharacterApi = await axios.get(`${baseUrl}/characters/${id}`)
-    //         setDetalleCharacters(detalleCharacterApi.data);
-    //         console.log(detalleCharacterApi.data);
-    //     }
-
-    //     getDetalleCharacters()
-    // },[])
+  
 
     useEffect(() => {
         const getHouses = async () => {
@@ -44,15 +36,7 @@ export const GameOfContextProvider = ({children}) => {
         getHouses()
     }, [])
 
-    // useEffect(() => {
-    //     const getSearch = async () => {
-    //         const searchApi = await axios.get(`${baseUrl}/characters?name=${characters.name}`)
-    //         setSearch(searchApi.data);
-    //         console.log(searchApi.data);
-    //     }
-
-    //     getSearch()
-    // }, [])
+  
 
     return (
         <GameOfContext.Provider value={{characters, houses}}>

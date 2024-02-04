@@ -1,13 +1,9 @@
-section{
+.escudosposition {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    text-align: center;
-    gap: 20px;
-    row-gap: 50px;
-    /* overflow-y: auto; */
-    /* height: 750px; */
+    gap: 10px;
 }
 
 .simple-bar{

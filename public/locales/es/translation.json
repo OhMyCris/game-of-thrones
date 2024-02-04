@@ -10,5 +10,11 @@
     "chapters":"APARICIONES",
     "parents":"PADRES",
     "family":"PARIENTES",
-    "titles":"TITULOS"
+    "titles":"TITULOS",
+    "settlement": "SEDE",
+    "region": "REGION",
+    "religions": "RELIGIONES",
+    "foundations": "FUNDACIÓN",
+    "return": "Volver"
+    
 }

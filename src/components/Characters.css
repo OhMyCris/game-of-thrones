@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
+gap: 5px;
   height: 650px;
 
   margin-top: 16px;
@@ -88,4 +88,24 @@
   border-bottom: 2px solid white;
   font: white;
   width: 340px;
+}
+
+
+
+.buscador::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+    background-image: url(/public/buscador.png);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    left: 29px;
+    top: -3px;
+}
+
+input::placeholder{
+  font-size: 15px;
+  color: white;
 }
