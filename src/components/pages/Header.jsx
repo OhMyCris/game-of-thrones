@@ -87,7 +87,7 @@ const Header = ({getCharacters}) => {
     <header>
 
    
-   
+   <div className="reprocador">
     
     <div className="reproductor">
     <audio loop className="audio" src="videoplayback.m4a" controls> este es un elemento de audio no soportado por tu navegador, prueba con otro </audio>
@@ -106,7 +106,7 @@ const Header = ({getCharacters}) => {
           />
       </div>
     )}
-   
+    </div>
    
       {mostrarVolver ? (
         <Link to='/characters'>

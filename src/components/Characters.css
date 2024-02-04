@@ -77,7 +77,7 @@
 }
 
 .buscador {
-  display: flex;
+  display: inline;
 }
 
 .search {
