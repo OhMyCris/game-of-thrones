@@ -16,12 +16,9 @@ const DetailCharacters = () => {
     titles: [],
   });
 
-  const {t} = useTranslation();
-
-
-const [detailsHouses, setDetailsHouses] = useState([]);
-
+  const [detailsHouses, setDetailsHouses] = useState([]);
   
+  const {t} = useTranslation();
 
   const { id } = useParams();
 

@@ -10,5 +10,10 @@
     "chapters":"CHAPTERS",
     "parents":"PARENTS",
     "family":"OTHER FAMILY",
-    "titles":"TITLES"
+    "titles":"TITLES",
+    "settlement":"SETTLEMENT",
+    "region": "REGION",
+    "religions":"RELIGIONS",
+    "foundations": "FOUNDATION",
+    "return": "Return"
 }

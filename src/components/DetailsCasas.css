@@ -10,3 +10,19 @@ section{
 .imagen-dettale-casa{
     width: 300px;
 }
+
+.houseName{
+    color:white;
+    font-size: 20px;
+}
+
+.houseDetailsName{
+    font-size: 15px;
+}
+
+.elementName{
+font-size: 9px;
+color: white;
+
+
+}
