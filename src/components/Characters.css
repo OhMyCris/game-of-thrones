@@ -77,7 +77,9 @@
 }
 
 .buscador {
+  position: relative;
   display: inline;
+  bottom: -30px;
 }
 
 .search {
@@ -85,4 +87,5 @@
   border: none;
   border-bottom: 2px solid white;
   font: white;
+  width: 340px;
 }
