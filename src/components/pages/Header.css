@@ -10,3 +10,15 @@ header {
     font-size: smaller;
     display: flex;
 }
+
+.audio {
+    width: 145px;
+    height: 20px;
+}
+
+.reproductor {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}

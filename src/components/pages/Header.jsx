@@ -87,6 +87,12 @@ const Header = ({getCharacters}) => {
   return (
     <header>
     {/* <Player1/> */}
+   
+    
+    <div className="reproductor">
+    <audio loop className="audio" src="videoplayback.m4a" controls> este es un elemento de audio no soportado por tu navegador, prueba con otro </audio>
+    </div>
+
     {mostrarSearch && (
       <div className="buscador">
           <input
@@ -98,7 +104,8 @@ const Header = ({getCharacters}) => {
           />
       </div>
     )}
-      
+   
+   
       {mostrarVolver ? (
         <Link to='/characters'>
           <div className="volver">
@@ -119,6 +126,7 @@ const Header = ({getCharacters}) => {
       )}
         <img className="espacio" src="./public/images/spain.png" onClick={() => handleLanguageChange('es')}/>
         <img className="espacio" src="./public/images/united-kingdom.png" onClick={() => handleLanguageChange('en')}/>
+      
     </header>
   )
 }
