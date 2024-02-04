@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import "./Header.css"
 import { useEffect, useState } from "react";
-// import Player1 from "../Player1";
+import Player1 from "../Player1";
 
 // import axios from "axios";
 
@@ -86,7 +86,7 @@ const Header = ({getCharacters}) => {
 
   return (
     <header>
-    {/* <Player1/> */}
+    <Player1/>
     {mostrarSearch && (
       <div className="buscador">
           <input
