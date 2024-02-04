@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 // import axios from "axios";
 
 
-const Header = ({getCharacters}) => {
+const Header = ({getCharacters, getCasas}) => {
  
   const {i18n} = useTranslation();
 
@@ -19,6 +19,7 @@ const Header = ({getCharacters}) => {
   const [mostrarVolver, setMostrarVolver] = useState(false)
   const [mostrarVolverDos, setMostrarVolverDos] = useState(false)
   const [mostrarSearch, setMostrarSearch] = useState(false)
+  const [mostrarSearchDos, setMostrarSearchDos] = useState(false)
   
 
   const rutasFijas = ['/characters', '/casas', '/cronologia']
@@ -34,6 +35,7 @@ const Header = ({getCharacters}) => {
     setMostrarVolver(pathname.startsWith("/characters/"))
     setMostrarVolverDos(pathname.startsWith("/casas/"))
     setMostrarSearch(pathname === "/characters")
+    setMostrarSearchDos(pathname === "/casas")
   }, [pathname])
 
   ///buscador///
@@ -68,6 +70,7 @@ const Header = ({getCharacters}) => {
   ///endbuscador///
 
   const [buscar, setBuscar] = useState('')
+  const [buscarDos, setBuscarDos] = useState('')
   const navigate = useNavigate()
 
   const handleKeyDown = (e) => {
@@ -80,6 +83,18 @@ const Header = ({getCharacters}) => {
   const handleChange = () => {
     navigate(`/characters?name=${buscar}`)
     console.log(buscar);
+  }
+
+  const handleKeyDownDos = (e) => {
+    if (e.key === 'Enter') {
+      handleChangeDos();
+      getCasas(e.target.value)
+    }
+  }
+
+  const handleChangeDos = () => {
+    navigate(`/casas?name=${buscarDos}`)
+    console.log(buscarDos);
   }
   
 
@@ -106,6 +121,18 @@ const Header = ({getCharacters}) => {
           />
       </div>
     )}
+
+    {mostrarSearchDos && (
+      <div className="buscador">
+          <input
+            className="search"
+            type="text"
+            placeholder=" &#x1F50D; Buscar..."
+            onChange={(e) => setBuscarDos(e.target.value)}
+            onKeyDown={handleKeyDownDos}
+          />
+      </div>
+      )}
     </div>
    
       {mostrarVolver ? (
